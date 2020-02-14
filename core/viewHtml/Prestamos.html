@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prestamos</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="funciones/sweetalert2.all.js" ></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/css/fontawesome-all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+
+    <script href></script>
+    
+  </head >
+  <body background="img/f.jpg">
+
+      
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#">
+      <img src="img/inacap.png" width="150" height="70" >
+    </a>
+    <ul class="nav nav-pills nav-fills">
+      <li class="nav-item">
+        <a class="nav-link active" href="login.html">Cerrar sesión</a>
+      </li>
+    </ul>
+
+  </nav>
+  	
+<div id="wrapper" class="col-xs-12 col-sm-8 col-md-12">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav ifondo">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="Productos.html" >  Productos</a>
+                </li>
+                <li>
+                    <a href="RegistroUsuarios.html">Usuarios</a>
+                </li>
+                <li>
+                    <a href="Prestamos.html">Prestamos</a>
+                </li>
+                <li>
+                    <a href="Hsalida.html">Historial salida</a>
+                </li>
+                <li>
+                    <a href="Hentrada.html">Historial entrada</a>
+                </li>
+                <li>
+                    <a href="AgregarStock.html">Stock</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <br>
+                <div class="row">
+                <div class="col-sm-1">
+                  <a href="#menu-toggle" style="background-color: #f44336;" class="btn btn-danger" id="menu-toggle">
+                <i class="fa fa-bars"></i></a>
+                </div>
+                <div class="col-sm-5">
+                  <div class="card">
+                         <div class="card-body">
+                <h1 class="text-center">Listado de prestamos </h1>
+                </div>
+                </div>
+
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-10"></div>
+                <div class="col-sm-2">
+
+                <button type="button" onclick="formulario()" class="btn btn-outline-success btn-lg"><i class="fas fa-cart-arrow-down"></i></button>
+                </div>
+                </div>
+            </div>
+            <br>
+          
+          
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12 col-lg-12 col-md-8">
+                      <div class="container">
+                         <div class="card">
+                         <div class="card-body">
+                        <table class="table table-striped table-striped table-bordered table-responsive-md">
+                          <table class="table table-striped table-striped table-bordered table-responsive-md">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombre alumno</th>
+                                <th scope="col">Prestamo</th>
+                                <th scope="col">Estado</th>
+                                <th colspan="2">Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Juanito Perez</td>
+                                <td>Batidora</td>
+                                <td>En prestamo</td>
+                                <td><i class="fa fa-edit" onclick="Eprestamo()" style="font-size: 24px; color: green"></i></td>
+                                <td><i class="fas fa-trash-alt" onclick="msjEliminar()" style="font-size: 24px; color: red"></i></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Francisco Sahueza</td>
+                                <td>Cuchara</td>
+                                <td>En prestamo</td>
+                                <td><i class="fa fa-edit" onclick="Eprestamo()" style="font-size: 24px; color: green"></i></td>
+                                <td><i class="fas fa-trash-alt" onclick="msjEliminar()" style="font-size: 24px; color: red"></i></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Carlos Molina</td>
+                                <td>Sarten</td>
+                                <td>En prestamo</td>
+                                <td><i class="fa fa-edit" onclick="Eprestamo()" style="font-size: 24px; color: green"></i></td>
+                                 <td><i class="fas fa-trash-alt" onclick="msjEliminar()" style="font-size: 24px; color: red"></i></td>
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <td colspan="7">
+                                  <nav class="navbar-center col-sm-4 offset-sm-4" aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                      <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                                    </ul>
+                                  </nav>
+                                </td>
+                              </tr>
+                            </tfoot>
+                        </table>
+                        </div>
+                        </div>
+                        </div>
+
+                  </div>
+                  </div>
+
+              </div>
+         
+                      
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="funciones/funciones.js"></script>
+    <script >
+      function formulario(){
+        (async function getFormValues () {
+const {value: formValues} = await swal({
+  title: 'Agregar Prestamo',
+  html:
+    '<input id="swal-input1" class="swal2-input" placeholder="Nombre Alumno">' +
+    '<input id="swal-input1" class="swal2-input" placeholder="Producto en prestamo">' +
+    '<input id="swal-input2" class="swal2-input" placeholder="Estado">',
+  focusConfirm: false,
+  preConfirm: () => {
+    return [
+      document.getElementById('swal-input1').value,
+      document.getElementById('swal-input2').value,
+      document.getElementById('swal-input3').value
+    ]
+  }
+})
+
+if (formValues) {
+  swal(json.stringify(formValues))
+}
+
+})()
+            }
+    </script>
+
+    <script >
+      function msjEliminar(){
+        const swalWithBootstrapButtons = swal.mixin({
+  confirmButtonClass: 'btn btn-success',
+  cancelButtonClass: 'btn btn-danger',
+  buttonsStyling: false,
+})
+
+swalWithBootstrapButtons({
+  title: 'Esta seguro que decea eliminar?',
+  
+  type: 'warning',
+  showCancelButton: true,
+  confirmButtonText: ' Si, eliminar! ',
+  cancelButtonText: ' cancelar! ',
+  reverseButtons: true
+}).then((result) => {
+  if (result.value) {
+    swalWithBootstrapButtons(
+      'Eliminado!',
+      'Prestamo eliminado.',
+      'success'
+    )
+  } else if (
+    // Read more about handling dismissals
+    result.dismiss === swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons(
+      'Cancelado',
+      'Eliminacion cancelada ',
+      'error'
+    )
+  }
+})
+      }
+    </script>
+    <script >
+      function Eprestamo(){
+        (async function getFormValues () {
+const {value: formValues} = await swal({
+  title: 'Editar Prestamo',
+  html:
+    '<input id="swal-input1" class="swal2-input" placeholder="Nombre Alumno">' +
+    '<input id="swal-input1" class="swal2-input" placeholder="Prestamo">' +
+    '<input id="swal-input2" class="swal2-input" placeholder="Estado">',
+  focusConfirm: false,
+  preConfirm: () => {
+    return [
+      document.getElementById('swal-input1').value,
+      document.getElementById('swal-input2').value,
+      document.getElementById('swal-input3').value
+    ]
+  }
+})
+
+if (formValues) {
+  swal(json.stringify(formValues))
+}
+
+})()
+            }
+    </script>
+
+    <footer >
+      
+      
+      
+      <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#">
+      <img src="img/inacap.png" width="150" height="70" >
+    </a>
+    <ul class="nav nav-pills nav-fills">
+      <li class="nav-item">
+        
+      </li>
+    </ul>
+
+  </nav>
+      
+    </footer>
+  </body>
+</html>
