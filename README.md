@@ -1,5 +1,5 @@
 # Gastronomía
-Provecto pañol gastronomía php
+Proyecto pañol gastronomía php
 
 ## Descripción general
 tarea ejecutada en clases que permite el control de productos dentro de un pañol de gastronomía
